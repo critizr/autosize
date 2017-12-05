@@ -136,6 +136,11 @@
 				return;
 			}
 
+			//fix issue with box sizing: border-box on firefox 28
+			if (ta.offsetHeight != ta.clientHeight) {
+				endHeight += ta.offsetHeight - heightOffset;
+			}
+
 			ta.style.height = endHeight + 'px';
 
 			// used to check if an update is actually necessary on window.resize
