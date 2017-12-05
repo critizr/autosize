@@ -137,8 +137,8 @@
 			}
 
 			//fix issue with box sizing: border-box on firefox 28
-			if (ta.offsetHeight != ta.clientHeight) {
-				endHeight += ta.offsetHeight - heightOffset;
+			if (ta.offsetHeight !== ta.clientHeight) {
+				endHeight += ta.offsetHeight - ta.clientHeight;
 			}
 
 			ta.style.height = endHeight + 'px';
